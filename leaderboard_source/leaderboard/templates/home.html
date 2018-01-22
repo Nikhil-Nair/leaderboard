@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+          {% for score in object_list %}
+            <tr>
+              <div class="score-entry">
+                <td>{{ score.name }}</td>
+                <td>{{ score.player_score }}</td>
+              </div>
+            </tr>
+          {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}
